@@ -336,12 +336,12 @@ class Details extends React.Component {
                         <div className="payheading">{restaurants.name}</div>
                         <h3 className="payitem-total">SubTotal: {subTotal}</h3>
                         <div>
-                    {menuItems.length >1 ?menuItems.map((item, index) => {
+                    {menuItems.length >1 ?menuItems.filter((filt )=> filt == filt.qty=== filt.qty<1).map((item, index) => {
                         
                         return <div key={index}>
                                             <div>
                                             <img style={{borderRadius:'50px',padding:'3px',marginLeft:'11px'}} src={`./${item.image}`} alt="Sorry" height="50px" width="50px" />
-                                                <span className="payitem-name">{item.name}Quantity:-{item.qty}</span>
+                                                <span className="payitem-name">{item.name}, Quantity:-{item.qty}</span>
                                             </div>
                                         </div>
                                     }): null }

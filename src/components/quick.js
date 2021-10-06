@@ -33,7 +33,7 @@ class Quick extends React.Component{
                     return <div  onClick={() => this.handleNavigate(item._id)} key={item._id} className="col-lg-4 col-md-6 col-sm-12 g-0  Hshadow-box">
 
                     <div name="left" className="Hitem-left">
-                        <img src={`./${item.image}`} alt="Sorry for the Inconvinience" height="100%" width="100%" />
+                        <img src={`./${item.image}`} alt="Sorry for  Inconvinience" height="100%" width="100%" />
                     </div>
                     <div name="right" className="Hitem-right">
                         <div className="Hheader">{item.name}</div>

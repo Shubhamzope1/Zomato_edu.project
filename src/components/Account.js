@@ -93,7 +93,7 @@ class Account extends React.Component {
                                         <div className="resName">{item.resname}</div>
                                         
                                         <div>
-                                            {item.menuItems ? item.menuItems.map((item) => {
+                                            {item.menuItems ? item.menuItems.filter((filt )=> filt == filt.qty=== filt.qty<1).map((item) => {
                                                 return <div className="ord-div">
                                                     <img style={{ borderRadius: '50px', padding: '3px', marginLeft: '11px' }} src={`./${item.image}`} alt="Sorry" height="50px" width="50px" />
                                                     <span className="itemName">{item.name}</span>
