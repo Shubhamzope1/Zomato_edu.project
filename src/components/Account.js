@@ -14,8 +14,6 @@ class Account extends React.Component {
             orders: [],
             restaurants:[],
             resid:[],
-            
-            
 
         }
     }
@@ -52,7 +50,8 @@ class Account extends React.Component {
     
 
     render() {
-        const { user, orders, } = this.state;
+        const { user, orders } = this.state;
+      
 
         return (
             <header>
@@ -64,10 +63,13 @@ class Account extends React.Component {
                     <div className="container-fluid header"></div>
                     <div className="container-fluid Abackground"></div>
                     <div className="col-xl-12 col-md-12 col-sm-12 mt-4 mb-3">
+                      <div>
+                         
+                      </div>
+                      
+                      
+                      
                         <div>
-
-
-
                             { user.map((item) => {
                                 return <div>
                                     <div className="Acclogo">{item.firstname.charAt(0)}{item.lastname.charAt(0)}
@@ -93,6 +95,7 @@ class Account extends React.Component {
                                         <div className="resName">{item.resname}</div>
                                         
                                         <div>
+                                           
                                             {item.menuItems ? item.menuItems.filter((filt )=> filt == filt.qty=== filt.qty<1).map((item) => {
                                                 return <div className="ord-div">
                                                     <img style={{ borderRadius: '50px', padding: '3px', marginLeft: '11px' }} src={`./${item.image}`} alt="Sorry" height="50px" width="50px" />
