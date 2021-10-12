@@ -147,7 +147,7 @@ class Details extends React.Component {
 
     getData = async (data) => {
         try {
-            const response = await fetch(`http://localhost:2020/payment`, {
+            const response = await fetch(`https://fierce-oasis-23606.herokuapp.com/payment`, {
                 method: "POST",
                 headers: {
                     Accept: "application/json",
@@ -192,7 +192,7 @@ class Details extends React.Component {
             resname:resname
         };
         axios({
-            url: 'http://localhost:2020/orders',
+            url: 'https://fierce-oasis-23606.herokuapp.com/orders',
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             data: orderObj

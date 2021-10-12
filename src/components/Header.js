@@ -105,8 +105,8 @@ class Header extends React.Component {
 
     }
 
-    responseFacebook(response) {
-        // this.setState({ loggedInUser: response.name, isLoggedIn: true, loginModalIsOpen: false })
+    responseFacebook=(response)=> {
+         this.setState({ loggedInUser: response.name,email: response.email, isLoggedIn: true, loginModalIsOpen: false })
         console.log(response)
       }
 

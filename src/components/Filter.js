@@ -29,7 +29,7 @@ class Filter extends React.Component {
             location: location
         };
         axios({
-            url: 'https://fierce-oasis-23606.herokuapp.com//filter',
+            url: 'https://fierce-oasis-23606.herokuapp.com/filter',
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             data: filterobj
@@ -39,7 +39,7 @@ class Filter extends React.Component {
             })
             .catch()
             axios({
-                url: 'https://fierce-oasis-23606.herokuapp.com//locations',
+                url: 'https://fierce-oasis-23606.herokuapp.com/locations',
                 method: 'GET',
                 headers: { 'Content-Type': 'application/json' }
             })
