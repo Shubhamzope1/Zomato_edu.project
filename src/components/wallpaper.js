@@ -16,7 +16,7 @@ class Wallpaper extends React.Component {
         const locId = event.target.value;
         sessionStorage.setItem('locationId', locId);
         axios({
-            url: `http://localhost:2020/restaurants/${locId}`,
+            url: `https://fierce-oasis-23606.herokuapp.com/restaurants/${locId}`,
             method: 'GET',
             headers: { 'Content-Type': 'application/json' }
         })

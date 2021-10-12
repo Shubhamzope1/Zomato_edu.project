@@ -49,7 +49,7 @@ class Details extends React.Component {
         const qs = queryString.parse(this.props.location.search);
         const { restaurant } = qs;
         axios({
-            url: `http://localhost:2020/restaurant/${restaurant}`,
+            url: `https://fierce-oasis-23606.herokuapp.com/restaurant/${restaurant}`,
             method: 'GET',
             headers: { 'Content-Type': 'application/json' }
         })
@@ -62,7 +62,7 @@ class Details extends React.Component {
     handleOrder = () => {
         const { restaurantId, menuItems } = this.state;
         axios({
-            url: `http://localhost:2020/menuitems/${restaurantId}`,
+            url: `https://fierce-oasis-23606.herokuapp.com/menuitems/${restaurantId}`,
             method: 'GET',
             headers: { 'Content-Type': 'application/json' }
         })
